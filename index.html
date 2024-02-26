@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Comparison Process </h1>
+    <h1 id="prompt"></h1>
+    <h1 id="prompt2"></h1>
+    <h1 id="outputting"></h1>
+
+    <script>
+        var choice;
+        var input1;
+        var input2;
+        var br = "\n";
+        
+        choice = prompt("Enter your Choice: "  + br + "[1] Arithmetic" + br + "[2] Comparison" + br + "[3] Logical" + br + "[4] Assignment");
+
+        if (choice == "1"){
+            input1 = prompt("Enter your First Input:", "Input Here");
+            input2 = prompt("Enter your Second Prompt:", "Input Here");
+
+            var sum = input1 + input2;
+            var difference = input1 - input2;
+            var product = input1*input2;
+            var quotient = input1/input2;
+
+            document.getElementById("outputting").innerHTML = "Arithmetic FUNCTION " + br; 
+            document.getElementById("outputting").innerHTML = "The sum of the two inputs are " + sum + br;
+            document.getElementById("outputting").innerHTML = "The difference of the two inputs are " + difference + br;
+            document.getElementById("outputting").innerHTML = "The product of the two inputs are " + product + br;
+            document.getElementById("outputting").innerHTML = "The quotient of the two inputs are " + quotient;
+        }
+        else if (choice == "2")
+        {
+            input1 = prompt("Enter your First Input:", "Input Here");
+            input2 = prompt("Enter your Second Prompt:", "Input Here");
+            
+            document.getElementById("outputting").innerHTML = "Comparison FUNCTION" + br;
+
+            if (input1 == input2){
+            document.getElementById("outputting").innerHTML = input1 + " is the same as " + input2;
+            }
+            else{
+            document.getElementById("outputting").innerHTML = input1 + " is not the same as " + input2;
+            }
+        }
+        else if (choice == "3")
+        {
+            input1 = prompt("Enter your First Input:", "Input Here");
+            input2 = prompt("Enter your Second Prompt:", "Input Here");
+        }
+        else if (choice == "4")
+        {
+            input1 = prompt("Enter your First Input:", "Input Here");
+            input2 = prompt("Enter your Second Prompt:", "Input Here");
+
+            var number = 30; 
+
+            document.getElementById("outputting").innerHTML = "Assignment FUNCTION" + br;
+            
+            sum += input1;  //sum = sum + input1
+            document.getElementById("outputting").innerHTML = "30 + input2 = " + number + br;
+            
+        }
+        else {
+            alert("Type the Correct Thing Please.");
+        }
+
+    </script>
+
+    
+</body>
+
+</html>
